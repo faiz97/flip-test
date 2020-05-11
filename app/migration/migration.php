@@ -1,5 +1,5 @@
 <?php
-include_once dirname(__DIR__).'/app/config/database.php';
+include_once dirname(__DIR__).'/config/database.php';
 include_once 'query.php';
 
 try {
@@ -17,7 +17,7 @@ try {
 
     echo "Table created successfully\n";
   } catch(PDOException $e) {
-    echo $sql . " " . $e->getMessage();
+    echo $sql . " " . $e->getMessage()."\n";
   }
   
   $conn = null;
